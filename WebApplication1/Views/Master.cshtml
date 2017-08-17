@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+	var image = Umbraco.TypedMedia(1144);
+}
+
+@* the fun starts here *@
+
+
+
+<head>
+   <link rel="stylesheet" href="~/css/style.css"/> 
+   <script src="~/scripts/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div><a href="#second" id="goToSecond">GO TO SECOND</a></div>
+
+    <div class="mainDiv" style="background: url(@image.Url) ">@RenderBody()</div>
+
+    <div id="first" style="height:1000px;">FIRST</div>
+
+    <div class="second" style="height:1000px;">SECOND</div>
+</body>
+
+
+<script>
+    $("#goToSecond").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".second").offset().top},
+            'slow');
+    })
+</script>
