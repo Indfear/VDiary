@@ -1,7 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = null;
-	var image = Umbraco.TypedMedia(1144);
+    Layout = null;
+    var image = Umbraco.TypedMedia(1144);
 }
 
 @* the fun starts here *@
@@ -9,13 +9,24 @@
 
 
 <head>
-   <link rel="stylesheet" href="~/css/style.css"/> 
-   <script src="~/scripts/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <script src="~/scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
 </head>
 <body>
-    <div><a href="#second" id="goToSecond">GO TO SECOND</a></div>
+    <!--<div><a href="#second" id="goToSecond">GO TO SECOND</a></div>-->
 
-    <div class="mainDiv" style="background: url(@image.Url) ">@RenderBody()</div>
+    <div class="mainDiv" style="background-image: url(@image.Url) ">
+        <div class="bg"></div>
+        <div class="menu">
+            @Html.Partial("Menu")
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+
+    </div>
 
     <div id="first" style="height:1000px;">FIRST</div>
 
@@ -23,10 +34,3 @@
 </body>
 
 
-<script>
-    $("#goToSecond").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".second").offset().top},
-            'slow');
-    })
-</script>

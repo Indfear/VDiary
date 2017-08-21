@@ -1,0 +1,15 @@
+﻿<ul id="menu">
+    <li><button><span>Home Page</span></button></li>
+    <li><button href="#second" id="goToSecond"><span>What is VDiary?</span></button></li>
+    <li><button><span>What is VDiary?</span></button></li>
+    <li><button><span>GO TO FOURTH</span></button></li>
+</ul>
+
+<script>
+    $("#goToSecond").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".second").offset().top
+        },
+            'slow');
+    })
+</script>
