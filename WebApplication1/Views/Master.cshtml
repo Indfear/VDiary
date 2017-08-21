@@ -23,6 +23,10 @@
             @Html.Partial("Menu")
         </div>
         <div class="content">
+            @if (Umbraco.MemberIsLoggedOn())
+            {
+                <h1>Welcome @User.Identity.Name</h1>
+            }
             @RenderBody()
         </div>
 

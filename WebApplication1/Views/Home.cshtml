@@ -1,75 +1,22 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Home>
+@using WebApplication1.Models
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
 	Layout = "Master.cshtml";
 }
 
-<p>Lorem ipsum dolor sit amet, no per nisl praesent, nobis aperiri minimum mel te. Congue equidem epicurei his at, ea vel graecis maluisset deseruisse, ne cum tantas minimum. Et fabellas maiestatis cum, altera repudiare voluptatum sit te. Usu ex sint everti. Ei eam utroque dolores, elit periculis assueverit id vim, brute erant gloriatur pro ei. Per tale sint novum ea.
+@{ 
+    if (User.Identity.IsAuthenticated)
+    {
+        <p>Welcome @User.Identity.Name</p>
+        <a href="@Url.Action("Logout", "Login")">Logout</a>
+    }
+    else
+    {
+        <p>You are not logged in!</p>
+    }
 
-Id ius autem quodsi. Et eam suas apeirian accusata, in quando luptatum consetetur pro. Usu ad melius phaedrum, no his unum novum exerci. Cum ex everti nusquam iudicabit, qui adhuc torquatos at. Pri quas brute feugiat an, his ne animal malorum nostrud, veri etiam ius cu. Pri et aperiam virtute, viris causae ocurreret eum an.
+    Html.RenderPartial("~/Views/Partials/RegisterPartial.cshtml", new RegisterModel());
 
-Ut vel tation dolorem vivendo, eu duo vero integre. Ut vel regione dolorum epicuri. Qui invenire laboramus cu, albucius lucilius definitionem vel at. No mel wisi accumsan percipitur, denique ancillae an vel. Sit dicunt accumsan facilisis in, ut mea liber explicari, vis quas vivendum ne.
-
-Sea ad justo iisque vituperata, pri no civibus nominati. Ad mea accusata dignissim, ea lorem diceret consequat vis. Dicam quaeque eam at, vix tantas graeci et. Agam nemore ullamcorper mei te, pro bonorum mediocrem at. Adhuc vivendo est ea, ea sea dico causae platonem. Nemore verear per cu.
-
-Has in vitae nominavi. Ipsum graeco te vix. Eos ex porro suscipit. Mel integre molestie ex, eius oporteat ei usu.</p>
-
-<p>
-    Lorem ipsum dolor sit amet, no per nisl praesent, nobis aperiri minimum mel te. Congue equidem epicurei his at, ea vel graecis maluisset deseruisse, ne cum tantas minimum. Et fabellas maiestatis cum, altera repudiare voluptatum sit te. Usu ex sint everti. Ei eam utroque dolores, elit periculis assueverit id vim, brute erant gloriatur pro ei. Per tale sint novum ea.
-
-    Id ius autem quodsi. Et eam suas apeirian accusata, in quando luptatum consetetur pro. Usu ad melius phaedrum, no his unum novum exerci. Cum ex everti nusquam iudicabit, qui adhuc torquatos at. Pri quas brute feugiat an, his ne animal malorum nostrud, veri etiam ius cu. Pri et aperiam virtute, viris causae ocurreret eum an.
-
-    Ut vel tation dolorem vivendo, eu duo vero integre. Ut vel regione dolorum epicuri. Qui invenire laboramus cu, albucius lucilius definitionem vel at. No mel wisi accumsan percipitur, denique ancillae an vel. Sit dicunt accumsan facilisis in, ut mea liber explicari, vis quas vivendum ne.
-
-    Sea ad justo iisque vituperata, pri no civibus nominati. Ad mea accusata dignissim, ea lorem diceret consequat vis. Dicam quaeque eam at, vix tantas graeci et. Agam nemore ullamcorper mei te, pro bonorum mediocrem at. Adhuc vivendo est ea, ea sea dico causae platonem. Nemore verear per cu.
-
-    Has in vitae nominavi. Ipsum graeco te vix. Eos ex porro suscipit. Mel integre molestie ex, eius oporteat ei usu.
-</p>
-
-<p>
-    Lorem ipsum dolor sit amet, no per nisl praesent, nobis aperiri minimum mel te. Congue equidem epicurei his at, ea vel graecis maluisset deseruisse, ne cum tantas minimum. Et fabellas maiestatis cum, altera repudiare voluptatum sit te. Usu ex sint everti. Ei eam utroque dolores, elit periculis assueverit id vim, brute erant gloriatur pro ei. Per tale sint novum ea.
-
-    Id ius autem quodsi. Et eam suas apeirian accusata, in quando luptatum consetetur pro. Usu ad melius phaedrum, no his unum novum exerci. Cum ex everti nusquam iudicabit, qui adhuc torquatos at. Pri quas brute feugiat an, his ne animal malorum nostrud, veri etiam ius cu. Pri et aperiam virtute, viris causae ocurreret eum an.
-
-    Ut vel tation dolorem vivendo, eu duo vero integre. Ut vel regione dolorum epicuri. Qui invenire laboramus cu, albucius lucilius definitionem vel at. No mel wisi accumsan percipitur, denique ancillae an vel. Sit dicunt accumsan facilisis in, ut mea liber explicari, vis quas vivendum ne.
-
-    Sea ad justo iisque vituperata, pri no civibus nominati. Ad mea accusata dignissim, ea lorem diceret consequat vis. Dicam quaeque eam at, vix tantas graeci et. Agam nemore ullamcorper mei te, pro bonorum mediocrem at. Adhuc vivendo est ea, ea sea dico causae platonem. Nemore verear per cu.
-
-    Has in vitae nominavi. Ipsum graeco te vix. Eos ex porro suscipit. Mel integre molestie ex, eius oporteat ei usu.
-</p>
-
-<p>
-    Lorem ipsum dolor sit amet, no per nisl praesent, nobis aperiri minimum mel te. Congue equidem epicurei his at, ea vel graecis maluisset deseruisse, ne cum tantas minimum. Et fabellas maiestatis cum, altera repudiare voluptatum sit te. Usu ex sint everti. Ei eam utroque dolores, elit periculis assueverit id vim, brute erant gloriatur pro ei. Per tale sint novum ea.
-
-    Id ius autem quodsi. Et eam suas apeirian accusata, in quando luptatum consetetur pro. Usu ad melius phaedrum, no his unum novum exerci. Cum ex everti nusquam iudicabit, qui adhuc torquatos at. Pri quas brute feugiat an, his ne animal malorum nostrud, veri etiam ius cu. Pri et aperiam virtute, viris causae ocurreret eum an.
-
-    Ut vel tation dolorem vivendo, eu duo vero integre. Ut vel regione dolorum epicuri. Qui invenire laboramus cu, albucius lucilius definitionem vel at. No mel wisi accumsan percipitur, denique ancillae an vel. Sit dicunt accumsan facilisis in, ut mea liber explicari, vis quas vivendum ne.
-
-    Sea ad justo iisque vituperata, pri no civibus nominati. Ad mea accusata dignissim, ea lorem diceret consequat vis. Dicam quaeque eam at, vix tantas graeci et. Agam nemore ullamcorper mei te, pro bonorum mediocrem at. Adhuc vivendo est ea, ea sea dico causae platonem. Nemore verear per cu.
-
-    Has in vitae nominavi. Ipsum graeco te vix. Eos ex porro suscipit. Mel integre molestie ex, eius oporteat ei usu.
-</p>
-
-<p>
-    Lorem ipsum dolor sit amet, no per nisl praesent, nobis aperiri minimum mel te. Congue equidem epicurei his at, ea vel graecis maluisset deseruisse, ne cum tantas minimum. Et fabellas maiestatis cum, altera repudiare voluptatum sit te. Usu ex sint everti. Ei eam utroque dolores, elit periculis assueverit id vim, brute erant gloriatur pro ei. Per tale sint novum ea.
-
-    Id ius autem quodsi. Et eam suas apeirian accusata, in quando luptatum consetetur pro. Usu ad melius phaedrum, no his unum novum exerci. Cum ex everti nusquam iudicabit, qui adhuc torquatos at. Pri quas brute feugiat an, his ne animal malorum nostrud, veri etiam ius cu. Pri et aperiam virtute, viris causae ocurreret eum an.
-
-    Ut vel tation dolorem vivendo, eu duo vero integre. Ut vel regione dolorum epicuri. Qui invenire laboramus cu, albucius lucilius definitionem vel at. No mel wisi accumsan percipitur, denique ancillae an vel. Sit dicunt accumsan facilisis in, ut mea liber explicari, vis quas vivendum ne.
-
-    Sea ad justo iisque vituperata, pri no civibus nominati. Ad mea accusata dignissim, ea lorem diceret consequat vis. Dicam quaeque eam at, vix tantas graeci et. Agam nemore ullamcorper mei te, pro bonorum mediocrem at. Adhuc vivendo est ea, ea sea dico causae platonem. Nemore verear per cu.
-
-    Has in vitae nominavi. Ipsum graeco te vix. Eos ex porro suscipit. Mel integre molestie ex, eius oporteat ei usu.
-</p>
-
-<p>
-    Lorem ipsum dolor sit amet, no per nisl praesent, nobis aperiri minimum mel te. Congue equidem epicurei his at, ea vel graecis maluisset deseruisse, ne cum tantas minimum. Et fabellas maiestatis cum, altera repudiare voluptatum sit te. Usu ex sint everti. Ei eam utroque dolores, elit periculis assueverit id vim, brute erant gloriatur pro ei. Per tale sint novum ea.
-
-    Id ius autem quodsi. Et eam suas apeirian accusata, in quando luptatum consetetur pro. Usu ad melius phaedrum, no his unum novum exerci. Cum ex everti nusquam iudicabit, qui adhuc torquatos at. Pri quas brute feugiat an, his ne animal malorum nostrud, veri etiam ius cu. Pri et aperiam virtute, viris causae ocurreret eum an.
-
-    Ut vel tation dolorem vivendo, eu duo vero integre. Ut vel regione dolorum epicuri. Qui invenire laboramus cu, albucius lucilius definitionem vel at. No mel wisi accumsan percipitur, denique ancillae an vel. Sit dicunt accumsan facilisis in, ut mea liber explicari, vis quas vivendum ne.
-
-    Sea ad justo iisque vituperata, pri no civibus nominati. Ad mea accusata dignissim, ea lorem diceret consequat vis. Dicam quaeque eam at, vix tantas graeci et. Agam nemore ullamcorper mei te, pro bonorum mediocrem at. Adhuc vivendo est ea, ea sea dico causae platonem. Nemore verear per cu.
-
-    Has in vitae nominavi. Ipsum graeco te vix. Eos ex porro suscipit. Mel integre molestie ex, eius oporteat ei usu.
-</p>
+    Html.RenderPartial("~/Views/Partials/LoginPartial.cshtml", new Umbraco.Web.Models.LoginModel());
+}
