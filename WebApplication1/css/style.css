@@ -1,5 +1,5 @@
 * {
-    font-family: 'Copperplate Gothic';
+    font-family: 'Times New Roman';
 }
 
 body {
@@ -47,7 +47,6 @@ body {
         height: 95%;
         width: 50%;
         color: white;
-        background-color: rgba(20, 187, 200, 0.5);
         overflow: hidden;
     }
 
