@@ -5,18 +5,23 @@
 	Layout = "Master.cshtml";
 }
 
-@{ 
-    if (User.Identity.IsAuthenticated)
-    {
-        <p>Welcome @User.Identity.Name</p>
-        <a href="@Url.Action("Logout", "Login")">Logout</a>
-    }
-    else
-    {
-        <p>You are not logged in!</p>
-    }
+<div class="content">
+    @{
+        if (User.Identity.IsAuthenticated)
+        {
+            <p>Welcome @User.Identity.Name</p>
+            <a href="@Url.Action("Logout", "Login")">Logout</a>
+        }
+        else
+        {
+            <p>You are not logged in!</p>
+        }
 
-    Html.RenderPartial("~/Views/Partials/RegisterPartial.cshtml", new RegisterModel());
+        Html.RenderPartial("~/Views/Partials/RegisterPartial.cshtml", new RegisterModel());
 
-    Html.RenderPartial("~/Views/Partials/LoginPartial.cshtml", new Umbraco.Web.Models.LoginModel());
-}
+        Html.RenderPartial("~/Views/Partials/LoginPartial.cshtml", new Umbraco.Web.Models.LoginModel());
+    }
+    </div>
+    <div id="first" style="height:1000px;">FIRST</div>
+
+    <div class="second" style="height:1000px;">SECOND</div>

@@ -3068,6 +3068,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Partials\RegisterPartial.cshtml" />
     <Content Include="Views\Partials\LoginPartial.cshtml" />
+    <Content Include="Views\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,8 +1,15 @@
-﻿<ul id="menu">
-    <li><button><span>Home Page</span></button></li>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IPublishedContent>
+@{ 
+    var logo = Umbraco.TypedMedia(1159);
+}
+<ul id="menu">
+    <li><img src="@logo.Url" id="logo"/></li>
+    <li><button><span>Home</span></button></li>
     <li><button href="#second" id="goToSecond"><span>What is VDiary?</span></button></li>
-    <li><button><span>What is VDiary?</span></button></li>
-    <li><button><span>GO TO FOURTH</span></button></li>
+    <li><button><span>Public tasks</span></button></li>
+    <li><button><span>About</span></button></li>
+    <li><button onclick="window.location.href='/register'"><span>Register</span></button></li>
+    <li><button><span>Login</span></button></li>
 </ul>
 
 <script>

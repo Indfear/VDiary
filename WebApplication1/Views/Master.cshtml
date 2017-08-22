@@ -22,19 +22,13 @@
         <div class="menu">
             @Html.Partial("Menu")
         </div>
-        <div class="content">
-            @if (Umbraco.MemberIsLoggedOn())
-            {
-                <h1>Welcome @User.Identity.Name</h1>
-            }
+        
+            
             @RenderBody()
-        </div>
 
     </div>
 
-    <div id="first" style="height:1000px;">FIRST</div>
-
-    <div class="second" style="height:1000px;">SECOND</div>
+   
 </body>
 
 
