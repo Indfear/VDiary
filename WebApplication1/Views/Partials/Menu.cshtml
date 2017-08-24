@@ -3,32 +3,39 @@
     var logo = Umbraco.TypedMedia(1159);
 }
 <ul id="menu">
-    <li><button><span>Home</span></button></li>
-    <li><button id="goToFirst"><span>What is VDiary?</span></button></li>
-    <li><button id="goToSecond"><span>Public tasks</span></button></li>
-    <li><button id="goToThird"><span>About</span></button></li>
+    <li><button class="goHome"><span>Home</span></button></li>
+    <li><button class="goToFirst"><span>What is VDiary?</span></button></li>
+    <li><button class="goToSecond"><span>Public tasks</span></button></li>
+    <li><button class="goToThird"><span>About</span></button></li>
     <li><button onclick="window.location.href='/register'"><span>Register</span></button></li>
     <li><button><span>Login</span></button></li>
 </ul>
 
 <script>
-    $("#goToFirst").click(function () {
+    $(".goHome").click(function () {
         $('html,body').animate({
-            scrollTop: $(".first").offset().top
+            scrollTop: $("body").offset().top - 50
         },
             900);
     })
 
-    $("#goToSecond").click(function () {
+    $(".goToFirst").click(function () {
         $('html,body').animate({
-            scrollTop: $(".second").offset().top
+            scrollTop: $(".first").offset().top - 50
         },
             900);
     })
 
-    $("#goToThird").click(function () {
+    $(".goToSecond").click(function () {
         $('html,body').animate({
-            scrollTop: $(".third").offset().top
+            scrollTop: $(".second").offset().top - 50
+        },
+            900);
+    })
+
+    $(".goToThird").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".third").offset().top - 50
         },
             900);
     })

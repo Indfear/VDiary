@@ -2,6 +2,7 @@
 @{
     Layout = null;
     var image = Umbraco.TypedMedia(1144);
+    var menuBackground = Umbraco.TypedMedia(1165);
 }
 
 @* the fun starts here *@
@@ -22,6 +23,9 @@
         <div class="menu">
             @Html.Partial("Menu")
         </div>
+        <div class="menu" id="menu2">
+            @Html.Partial("Menu")
+        </div>
             @RenderBody()
     </div>
 
@@ -29,9 +33,19 @@
 </body>
 
 <script>
-   
-
     $(document).ready(function () {
         $('div.mainDiv').css('height', $(window).height() + 'px');
     });
+
+    (function ($) {
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#menu2').fadeIn(500);
+                } else {
+                    $('#menu2').fadeOut(500);
+                }
+            });
+        });
+    })(jQuery);
 </script>
