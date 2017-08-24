@@ -281,7 +281,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-reboot.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\register.css" />
     <Content Include="css\style.css" />
     <Content Include="default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -296,6 +299,7 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery-3.2.1.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\tether.js" />
     <Content Include="Umbraco\Actions\delete.aspx" />
     <Content Include="Umbraco\Actions\editContent.aspx" />
     <Content Include="Umbraco\Actions\preview.aspx" />

@@ -1,6 +1,12 @@
 ﻿@using WebApplication1.Controllers
 @model Umbraco.Web.Models.LoginModel
 
+<style>
+    .editor-field{
+        color: black;
+    }
+</style>
+
 @using (Html.BeginUmbracoForm<LoginController>("Login"))
 {
     @Html.AntiForgeryToken()

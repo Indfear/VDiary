@@ -1,6 +1,12 @@
 ﻿@using WebApplication1.Controllers
 @model WebApplication1.Models.RegisterModel
 
+<style>
+    .editor-field{
+        color: black;
+    }
+</style>
+
 @using (Html.BeginUmbracoForm<RegisterController>("Register"))
 {
     @Html.AntiForgeryToken()
@@ -33,22 +39,23 @@
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Biography)
+            
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Biography)
+            @Html.TextAreaFor(model => model.Biography)
             @Html.ValidationMessageFor(model => model.Biography)
         </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Avatar)
         </div>
-        <div class="editor-field">
-            <input type="file" name="Avatar" />
+        <div class="editor-field ">
+            <input id="avatar-input" type="file" name="Avatar" />
             @Html.ValidationMessageFor(model => model.Avatar)
         </div>
 
         <p>
-            <input class="btn btn-primary" type="submit" value="Create" />
+            <input id="create" class="btn btn-primary" type="submit" value="Create" />
         </p>
     </fieldset>
 }

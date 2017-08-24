@@ -1,9 +1,41 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Register>
+@using WebApplication1.Models
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "Master.cshtml";
+	Layout = null;
+    var backgroundRegister = Umbraco.TypedMedia(1160);
+    var woodenBackground = Umbraco.TypedMedia(1164);
 }
 
-<div class="content">
-    <p>This is registration!</p>
-</div>
+
+
+<head>
+    <link rel="stylesheet" href="~/css/register.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="~/scripts/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--<div><a href="#second" id="goToSecond">GO TO SECOND</a></div>-->
+
+    <div class="mainDiv" style="background-image: url(@backgroundRegister.Url)" >
+        <div class="bg"></div>
+        <div class="homesite">
+            <button onclick="window.location.href='@Umbraco.TypedContent(1150).Url()'">Home site</button>
+        </div>
+        <div class="container">
+            <div class="=row">
+                <div class="col-xs-12">
+                        <div class="main2">
+                            <h1>Join to the community!</h1>
+                            @{Html.RenderPartial("~/Views/Partials/RegisterPartial.cshtml", new RegisterModel());}
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>

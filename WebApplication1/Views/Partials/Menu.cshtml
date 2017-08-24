@@ -3,20 +3,33 @@
     var logo = Umbraco.TypedMedia(1159);
 }
 <ul id="menu">
-    <li><img src="@logo.Url" id="logo"/></li>
     <li><button><span>Home</span></button></li>
-    <li><button href="#second" id="goToSecond"><span>What is VDiary?</span></button></li>
-    <li><button><span>Public tasks</span></button></li>
-    <li><button><span>About</span></button></li>
+    <li><button id="goToFirst"><span>What is VDiary?</span></button></li>
+    <li><button id="goToSecond"><span>Public tasks</span></button></li>
+    <li><button id="goToThird"><span>About</span></button></li>
     <li><button onclick="window.location.href='/register'"><span>Register</span></button></li>
     <li><button><span>Login</span></button></li>
 </ul>
 
 <script>
+    $("#goToFirst").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".first").offset().top
+        },
+            900);
+    })
+
     $("#goToSecond").click(function () {
         $('html,body').animate({
             scrollTop: $(".second").offset().top
         },
-            'slow');
+            900);
+    })
+
+    $("#goToThird").click(function () {
+        $('html,body').animate({
+            scrollTop: $(".third").offset().top
+        },
+            900);
     })
 </script>

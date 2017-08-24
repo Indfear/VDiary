@@ -17,11 +17,21 @@
             <p>You are not logged in!</p>
         }
 
-        Html.RenderPartial("~/Views/Partials/RegisterPartial.cshtml", new RegisterModel());
-
         Html.RenderPartial("~/Views/Partials/LoginPartial.cshtml", new Umbraco.Web.Models.LoginModel());
+
+        if (User.Identity.IsAuthenticated)
+        {
+            <div style="background-color:brown">
+                <p>Your tasks:</p>
+                <p>Task 1</p>
+            </div>
+        }
     }
+
+
     </div>
-    <div id="first" style="height:1000px;">FIRST</div>
+    <div class="first" style="height:1000px;">FIRST</div>
 
     <div class="second" style="height:1000px;">SECOND</div>
+
+    <div class="third" style="height:1000px;">THIRD</div>
