@@ -3066,13 +3066,14 @@
     <Content Include="Umbraco\Webservices\TreeDataService.ashx" />
     <Content Include="Umbraco\Webservices\UltimatePickerAutoCompleteHandler.ashx" />
     <Content Include="Umbraco\Xslt\Web.config" />
-    <Content Include="Views\Partials\Menu.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Partials\RegisterPartial.cshtml" />
     <Content Include="Views\Partials\LoginPartial.cshtml" />
     <Content Include="Views\Register.cshtml" />
+    <Content Include="Views\Partials\MenuTopPartial.cshtml" />
+    <Content Include="Views\Partials\MenuScrollPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

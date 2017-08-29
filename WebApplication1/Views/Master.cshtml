@@ -1,51 +1,37 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
-    var image = Umbraco.TypedMedia(1144);
+    var image2 = Umbraco.TypedMedia(1144);
     var menuBackground = Umbraco.TypedMedia(1165);
 }
 
 @* the fun starts here *@
-
-
-
 <head>
-    <link rel="stylesheet" href="~/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css" />
     <script src="~/scripts/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <!--<div><a href="#second" id="goToSecond">GO TO SECOND</a></div>-->
 
-    <div class="mainDiv" style="background-image: url(@image.Url) ">
-        <div class="bg"></div>
-        <div class="menu">
-            @Html.Partial("Menu")
-        </div>
-        <div class="menu" id="menu2">
-            @Html.Partial("Menu")
-        </div>
-            @RenderBody()
-    </div>
+    @Html.Partial("MenuScrollPartial")
 
-   
-</body>
+    @RenderBody()
 
-<script>
-    $(document).ready(function () {
-        $('div.mainDiv').css('height', $(window).height() + 'px');
-    });
-
-    (function ($) {
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('#menu2').fadeIn(500);
-                } else {
-                    $('#menu2').fadeOut(500);
-                }
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('#menu2').fadeIn(500);
+                    } else {
+                        $('#menu2').fadeOut(500);
+                    }
+                });
             });
-        });
-    })(jQuery);
-</script>
+        })(jQuery);    
+    </script>
+
+</body>
