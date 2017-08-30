@@ -5,6 +5,23 @@
     .editor-field{
         color: black;
     }
+
+    .editor-field,
+    .editor-label{
+        margin: 10px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        border-radius: 20px;
+        background-color: orange;
+        transition: 0.5s;
+    }
+
+    .btn:hover{
+        background-color: darkorange;
+        color: darkblue;
+    }
 </style>
 
 @using (Html.BeginUmbracoForm<LoginController>("Login"))

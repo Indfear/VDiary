@@ -3074,6 +3074,7 @@
     <Content Include="Views\Register.cshtml" />
     <Content Include="Views\Partials\MenuTopPartial.cshtml" />
     <Content Include="Views\Partials\MenuScrollPartial.cshtml" />
+    <Content Include="Views\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -4,7 +4,7 @@
 @{
     Layout = "Master.cshtml";
     var photo = Umbraco.TypedMedia(1165);
-    var image = Umbraco.TypedMedia(1144);
+    var image = Umbraco.TypedMedia(1169);
 
     var image1 = Umbraco.TypedMedia(1160);
     var image2 = Umbraco.TypedMedia(1159);
@@ -43,139 +43,150 @@
     <div class="third" style="height:1000px;">THIRD</div>*/
 }
 
+<style>
+    
+
+</style>
+
+@if (Umbraco.MemberIsLoggedOn())
+{
+    <p>Yo mate! You good mate?</p>
+
+    <a href="@Url.Action("Logout", "Login")">Logout</a>
+}
+else
+{
+    <section id="home">
+
+        <div class="container-fluid" style="background-image: url(@image.Url); height: 100vh">
+            <div class="bg"></div>
+
+            @Html.Partial("MenuTopPartial")
 
 
-<section id="home">
-
-    <div class="container-fluid" style="background-image: url(@image.Url); height: 1000px">
-        <div class="bg"></div>
-
-        @Html.Partial("MenuTopPartial")
-
-
-        <div class="container main">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Don't let your dreams be dreams</h1>
-
-                    @{Html.RenderPartial("~/Views/Partials/LoginPartial.cshtml", new Umbraco.Web.Models.LoginModel());}
+            <div class="container main">
+                <div class="row center-parent" style="height:100%">
+                    <div class="col-md-12 center-child">
+                        <h1>Don't let your dreams be dreams</h1>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-</section>
+    </section>
 
-<section id="first">
-    <div class="container-fluid" style="background-color: palegoldenrod">
-        <div class="container">
-            <div class="row" style="background-color: fuchsia">
-                <div class="col-md-6">
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    <section id="first">
+        <div class="container-fluid" style="background-color: palegoldenrod">
+            <div class="container">
+                <div class="row" style="background-color: fuchsia">
+                    <div class="col-md-6">
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-                        Where does it come from?
-                    </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="@photo.Url" style="max-width:250px" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="second">
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row" style="background-color: yellowgreen">
-                <div class="col-md-6">
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                        Where does it come from?
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <img src="@photo.Url" style="max-width:250px" />
+                            Where does it come from?
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="@photo.Url" style="max-width:250px" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="third">
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row" style="background-color: maroon">
-                <div class="col-md-6">
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    <section id="second">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row" style="background-color: yellowgreen">
+                    <div class="col-md-6">
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-                        Where does it come from?
-                    </p>
-                    <p>
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
-                        Where does it come from?
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <img src="@photo.Url" style="max-width:250px" />
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+                            Where does it come from?
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@photo.Url" style="max-width:250px" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="third">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row" style="background-color: maroon">
+                    <div class="col-md-6">
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+                            Where does it come from?
+                        </p>
+                        <p>
+                            Why do we use it?
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+                            Where does it come from?
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@photo.Url" style="max-width:250px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                            }
+
 
 </body>
 

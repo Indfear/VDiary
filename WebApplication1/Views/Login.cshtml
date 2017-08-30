@@ -1,0 +1,69 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Login>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+    var loginBackground = Umbraco.TypedMedia(1173);
+}
+
+<style>
+    .container-fluid {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        background: no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    .container{
+        height: 100%;
+    }
+
+    .main{
+        display: table;
+        height: 100%;
+
+    }
+
+    .center{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .box{
+        border-radius: 20px;
+        border: orange solid 1px;
+        background-color: black;
+        color: white;
+        margin: 0 auto;
+        width: 33%;
+    }
+</style>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="~/scripts/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid" style="background-image: url(@(loginBackground.Url))">
+        <div class="container  main">
+            <div class="row center" style="text-align: center; vertical-align: middle">
+                    <div class="col-sm-12" style="text-align: center">
+                        <div class="box">
+                            @{Html.RenderPartial("~/Views/Partials/LoginPartial.cshtml", new Umbraco.Web.Models.LoginModel());}
+                            <a href="@(Umbraco.TypedContent(1150).Url())">Home site</a>
+                        </div>
+                        
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
