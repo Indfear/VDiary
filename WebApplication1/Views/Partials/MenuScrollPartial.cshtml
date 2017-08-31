@@ -1,6 +1,77 @@
 ﻿@if (User.Identity.IsAuthenticated)
 {
+    var memberName = Membership.GetUser().UserName;
 
+
+    <div id="menu2">
+        <div class="container-fluid">
+            <nav class="navbar">
+                <div class="user">
+                    <div class="user-info">
+                        <h1>Welcome <a href="">@memberName</a></h1>
+                        <ul>
+                            <li><a href=""><img src="media/1039/envelope-158279_1280.png" style="height:15px" /></a></li>
+                            <li><a href="@Url.Action("Logout", "Login")">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="profile-photo" style="float:right; background-color: white">
+                        <button id="myBtn"><img src="/media/1040/user-icon-2098873_1920.png" style="height: 100%" /></button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ScrollMenu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="">VDiary</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse " id="ScrollMenu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="goHome">Home</a></li>
+                            <li><a href="/your-tasks">Your tasks</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="modalScrollMenu" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <img src="/media/1040/user-icon-2098873_1920.png" />
+                <h1><a href="">@memberName</a></h1>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal...</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('modalScrollMenu');
+        var btn = document.getElementById('myBtn');
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 }
 else
 {

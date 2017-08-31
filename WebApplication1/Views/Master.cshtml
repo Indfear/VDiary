@@ -3,6 +3,7 @@
     Layout = null;
     var image2 = Umbraco.TypedMedia(1144);
     var menuBackground = Umbraco.TypedMedia(1165);
+    var userBackground = Umbraco.TypedMedia(1144);
 }
 
 @* the fun starts here *@
@@ -18,7 +19,17 @@
 
     @Html.Partial("MenuScrollPartial")
 
-    @RenderBody()
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="container-fluid" style="background-image: url(@(userBackground.Url)); min-height: 100vh">
+            @RenderBody()
+        </div>
+    }
+    else
+    {
+        @RenderBody()
+    }
+
 
     <script>
         (function ($) {
@@ -31,7 +42,7 @@
                     }
                 });
             });
-        })(jQuery);    
+        })(jQuery);
     </script>
 
 </body>

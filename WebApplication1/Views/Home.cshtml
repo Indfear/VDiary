@@ -4,6 +4,7 @@
 @{
     Layout = "Master.cshtml";
     var photo = Umbraco.TypedMedia(1165);
+    
     var image = Umbraco.TypedMedia(1169);
 
     var image1 = Umbraco.TypedMedia(1160);
@@ -46,9 +47,44 @@
 
 @if (Umbraco.MemberIsLoggedOn())
 {
-    <p>Yo mate! You good mate?</p>
+    
+        <div class="bg"></div>
+        @Html.Partial("MenuTopPartial")
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at neque sed ante hendrerit sagittis non ut est. Sed bibendum nisi id fringilla imperdiet. Sed scelerisque sollicitudin tortor. Quisque posuere urna odio, sit amet finibus massa condimentum tempus. Sed sit amet congue orci. Aenean quis turpis risus. Praesent arcu massa, fringilla at leo sed, feugiat accumsan sapien. Duis quis auctor diam. Praesent feugiat sit amet libero quis varius. Etiam vestibulum nec leo at consequat. Aenean volutpat sagittis eros nec convallis. Nulla ipsum lorem, suscipit tincidunt fermentum a, convallis sit amet quam. Nam eleifend vitae risus non luctus. Nullam turpis quam, tristique quis enim at, mattis facilisis nunc.
 
-    <a href="@Url.Action("Logout", "Login")">Logout</a>
+Pellentesque laoreet, ipsum quis eleifend luctus, justo nisi elementum sapien, sed maximus arcu arcu ut quam. Ut ultricies dignissim interdum. Fusce in iaculis eros. Nam commodo dolor ligula, at laoreet metus pretium vel. Sed at maximus tellus, eget pharetra mi. Aenean viverra, neque ac hendrerit tincidunt, massa nibh dignissim ex, id maximus augue tortor sed est. Aliquam aliquam ut velit et eleifend. Maecenas in turpis id lorem porta tristique. Suspendisse pretium orci vel elit varius, quis hendrerit tellus dapibus.
+
+Mauris non augue blandit, feugiat lorem eget, placerat ex. Vivamus a velit at enim bibendum finibus nec at tortor. Integer quis ex imperdiet, convallis nulla vel, gravida nunc. Donec lorem risus, iaculis aliquet finibus non, imperdiet ut tortor. Integer nisi odio, dignissim at venenatis accumsan, rhoncus vitae orci. Sed nec nunc rhoncus, luctus elit iaculis, consequat erat. Suspendisse potenti. Vestibulum ultrices, metus eu hendrerit luctus, libero magna laoreet ipsum, in interdum dolor urna at ipsum.
+
+Sed egestas interdum tempor. Vivamus hendrerit, ipsum sed pretium iaculis, elit tellus pretium nulla, eget bibendum metus enim at libero. Donec risus ipsum, laoreet quis urna non, sollicitudin sollicitudin sapien. Aenean suscipit tellus et lobortis elementum. Sed viverra risus id ligula mattis, non viverra tortor interdum. Nullam porttitor odio a justo maximus tempor. In hac habitasse platea dictumst.
+
+Integer elementum gravida varius. Sed laoreet erat varius felis semper iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas nunc nisl, condimentum ut turpis eget, semper cursus metus. Praesent ante elit, faucibus in nunc fringilla, iaculis vehicula ipsum. Proin sodales pellentesque viverra. Aenean tincidunt ut tortor efficitur facilisis. Praesent nec sapien at odio dignissim interdum. Morbi facilisis nisl non libero aliquet rutrum. Vivamus pulvinar neque volutpat est pellentesque viverra. Morbi malesuada enim sit amet tortor vulputate semper. Phasellus finibus tellus libero, at molestie quam eleifend nec. In dictum odio eu tellus vestibulum tincidunt. Nam dignissim scelerisque nibh, quis vestibulum sapien accumsan sollicitudin.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at neque sed ante hendrerit sagittis non ut est. Sed bibendum nisi id fringilla imperdiet. Sed scelerisque sollicitudin tortor. Quisque posuere urna odio, sit amet finibus massa condimentum tempus. Sed sit amet congue orci. Aenean quis turpis risus. Praesent arcu massa, fringilla at leo sed, feugiat accumsan sapien. Duis quis auctor diam. Praesent feugiat sit amet libero quis varius. Etiam vestibulum nec leo at consequat. Aenean volutpat sagittis eros nec convallis. Nulla ipsum lorem, suscipit tincidunt fermentum a, convallis sit amet quam. Nam eleifend vitae risus non luctus. Nullam turpis quam, tristique quis enim at, mattis facilisis nunc.
+
+                        Pellentesque laoreet, ipsum quis eleifend luctus, justo nisi elementum sapien, sed maximus arcu arcu ut quam. Ut ultricies dignissim interdum. Fusce in iaculis eros. Nam commodo dolor ligula, at laoreet metus pretium vel. Sed at maximus tellus, eget pharetra mi. Aenean viverra, neque ac hendrerit tincidunt, massa nibh dignissim ex, id maximus augue tortor sed est. Aliquam aliquam ut velit et eleifend. Maecenas in turpis id lorem porta tristique. Suspendisse pretium orci vel elit varius, quis hendrerit tellus dapibus.
+
+                        Mauris non augue blandit, feugiat lorem eget, placerat ex. Vivamus a velit at enim bibendum finibus nec at tortor. Integer quis ex imperdiet, convallis nulla vel, gravida nunc. Donec lorem risus, iaculis aliquet finibus non, imperdiet ut tortor. Integer nisi odio, dignissim at venenatis accumsan, rhoncus vitae orci. Sed nec nunc rhoncus, luctus elit iaculis, consequat erat. Suspendisse potenti. Vestibulum ultrices, metus eu hendrerit luctus, libero magna laoreet ipsum, in interdum dolor urna at ipsum.
+
+                        Sed egestas interdum tempor. Vivamus hendrerit, ipsum sed pretium iaculis, elit tellus pretium nulla, eget bibendum metus enim at libero. Donec risus ipsum, laoreet quis urna non, sollicitudin sollicitudin sapien. Aenean suscipit tellus et lobortis elementum. Sed viverra risus id ligula mattis, non viverra tortor interdum. Nullam porttitor odio a justo maximus tempor. In hac habitasse platea dictumst.
+
+                        Integer elementum gravida varius. Sed laoreet erat varius felis semper iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas nunc nisl, condimentum ut turpis eget, semper cursus metus. Praesent ante elit, faucibus in nunc fringilla, iaculis vehicula ipsum. Proin sodales pellentesque viverra. Aenean tincidunt ut tortor efficitur facilisis. Praesent nec sapien at odio dignissim interdum. Morbi facilisis nisl non libero aliquet rutrum. Vivamus pulvinar neque volutpat est pellentesque viverra. Morbi malesuada enim sit amet tortor vulputate semper. Phasellus finibus tellus libero, at molestie quam eleifend nec. In dictum odio eu tellus vestibulum tincidunt. Nam dignissim scelerisque nibh, quis vestibulum sapien accumsan sollicitudin.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at neque sed ante hendrerit sagittis non ut est. Sed bibendum nisi id fringilla imperdiet. Sed scelerisque sollicitudin tortor. Quisque posuere urna odio, sit amet finibus massa condimentum tempus. Sed sit amet congue orci. Aenean quis turpis risus. Praesent arcu massa, fringilla at leo sed, feugiat accumsan sapien. Duis quis auctor diam. Praesent feugiat sit amet libero quis varius. Etiam vestibulum nec leo at consequat. Aenean volutpat sagittis eros nec convallis. Nulla ipsum lorem, suscipit tincidunt fermentum a, convallis sit amet quam. Nam eleifend vitae risus non luctus. Nullam turpis quam, tristique quis enim at, mattis facilisis nunc.
+
+                        Pellentesque laoreet, ipsum quis eleifend luctus, justo nisi elementum sapien, sed maximus arcu arcu ut quam. Ut ultricies dignissim interdum. Fusce in iaculis eros. Nam commodo dolor ligula, at laoreet metus pretium vel. Sed at maximus tellus, eget pharetra mi. Aenean viverra, neque ac hendrerit tincidunt, massa nibh dignissim ex, id maximus augue tortor sed est. Aliquam aliquam ut velit et eleifend. Maecenas in turpis id lorem porta tristique. Suspendisse pretium orci vel elit varius, quis hendrerit tellus dapibus.
+
+                        Mauris non augue blandit, feugiat lorem eget, placerat ex. Vivamus a velit at enim bibendum finibus nec at tortor. Integer quis ex imperdiet, convallis nulla vel, gravida nunc. Donec lorem risus, iaculis aliquet finibus non, imperdiet ut tortor. Integer nisi odio, dignissim at venenatis accumsan, rhoncus vitae orci. Sed nec nunc rhoncus, luctus elit iaculis, consequat erat. Suspendisse potenti. Vestibulum ultrices, metus eu hendrerit luctus, libero magna laoreet ipsum, in interdum dolor urna at ipsum.
+
+                        Sed egestas interdum tempor. Vivamus hendrerit, ipsum sed pretium iaculis, elit tellus pretium nulla, eget bibendum metus enim at libero. Donec risus ipsum, laoreet quis urna non, sollicitudin sollicitudin sapien. Aenean suscipit tellus et lobortis elementum. Sed viverra risus id ligula mattis, non viverra tortor interdum. Nullam porttitor odio a justo maximus tempor. In hac habitasse platea dictumst.
+
+                        Integer elementum gravida varius. Sed laoreet erat varius felis semper iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas nunc nisl, condimentum ut turpis eget, semper cursus metus. Praesent ante elit, faucibus in nunc fringilla, iaculis vehicula ipsum. Proin sodales pellentesque viverra. Aenean tincidunt ut tortor efficitur facilisis. Praesent nec sapien at odio dignissim interdum. Morbi facilisis nisl non libero aliquet rutrum. Vivamus pulvinar neque volutpat est pellentesque viverra. Morbi malesuada enim sit amet tortor vulputate semper. Phasellus finibus tellus libero, at molestie quam eleifend nec. In dictum odio eu tellus vestibulum tincidunt. Nam dignissim scelerisque nibh, quis vestibulum sapien accumsan sollicitudin.</p>
+                    <a href="@Url.Action("Logout", "Login")">Logout</a>
+                </div>
+            </div>
+        </div>
+    
 }
 else
 {
